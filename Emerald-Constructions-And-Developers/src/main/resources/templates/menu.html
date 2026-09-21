@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Emerald-constructors-Developers</title>
+<link rel="icon" href="/asserts/images/Emeraldlogo.png">
+<link rel="stylesheet" href="/asserts/css/Emerald.css">
+</head>
+
+<body>
+	<nav th:fragment="menu">
+
+		<div>
+			<img th:src="@{/asserts/images/Emeraldlogo.png}" alt="Emerald Logo">
+		</div>
+
+		<section>
+			<ul>
+
+				<li><a th:href="@{/index}">Home</a></li>
+
+				<li><a th:href="@{/aboutus}">About Us</a></li>
+
+				<li class="services"><a href="javascript:void(0);"
+					onclick="toggleServices(event)"> Services <span>▼</span>
+				</a>
+
+					<ul class="services_dropdown" id="servicesDropdown">
+
+						<li><a th:href="@{/electricalwork}"> Electrical Works </a></li>
+
+						<li><a th:href="@{/mechanicalfabrication}"> Mechanical
+								Fabrication </a></li>
+
+						<li><a th:href="@{/civilconstruction}"> Civil
+								Construction </a></li>
+
+						<li><a th:href="@{/interior}"> Interior Works </a></li>
+
+						<li><a th:href="@{/painting}"> Painting Works </a></li>
+
+					</ul></li>
+
+				<li><a th:href="@{/gallery}">Gallery</a></li>
+
+				<li><a th:href="@{/contactus}">Contact Us</a></li>
+
+			</ul>
+		</section>
+
+	</nav>
+
+	<script>
+		function toggleServices(event) {
+
+			event.stopPropagation();
+
+			const dropdown = document.getElementById("servicesDropdown");
+
+			dropdown.classList.toggle("show");
+		}
+
+		document.addEventListener("click", function(event) {
+
+			const services = document.querySelector(".services");
+
+			const dropdown = document.getElementById("servicesDropdown");
+
+			if (!services.contains(event.target)) {
+
+				dropdown.classList.remove("show");
+
+			}
+
+		});
+	</script>
+
+
+</body>
+
+</html>

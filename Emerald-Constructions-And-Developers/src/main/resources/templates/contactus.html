@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Emerald-constructors-Developers</title>
+<link rel="icon" href="/asserts/images/Emeraldlogo.png">
+<link rel="stylesheet" href="/asserts/css/Emerald.css">
+</head>
+<body>
+	<div th:insert="menu::menu"></div>
+
+	<main class="contact-section">
+		<h1 class="contact-title">Contact Us</h1>
+
+		<div class="contact-container">
+			<!-- Left Side: Information Stack -->
+			<div id="contact_left">
+				<article class="info-item">
+					<aside class="info-header">
+						<img src="/asserts/images/address-location-map-svgrepo-com (2).svg" alt="Address Icon" class="icon-orange">
+						<h3>Address</h3>
+					</aside>
+					<p>H.No-12-178/3, Srinagar colony, Patancheru,<br>
+					Sangareddy District, PIN-502319. Telangana State ,<br>INDIA</p>
+				</article>
+
+				<article class="info-item">
+					<aside class="info-header">
+						<img src="/asserts/images/telephone-call-telephone-svgrepo-com.svg" alt="Call Icon" class="icon-orange">
+						<h3>Call Us</h3>
+					</aside>
+					<p>+91 90524 95755</p>
+				</article>
+
+				<article class="info-item">
+					<aside class="info-header">
+						<img src="/asserts/images/email-1573-svgrepo-com.svg" alt="Email Icon" class="icon-orange">
+						<h3>Email Us</h3>
+					</aside>
+					<p>emeraldinfrahyd@gmail.com</p>
+				</article>
+			</div>
+
+			<!-- Right Side: Form Grid -->
+			<div id="contact_right">
+				<form action="#" th:action="@{/contact}" method="post">
+					<div class="form-row">
+						<input type="text" name="name" placeholder="Name" required>
+						<input type="email" name="email" placeholder="Email" required>
+					</div>
+					<div class="form-row">
+						<input type="tel" name="mobile" placeholder="Mobile No" required>
+						<input type="text" name="service" placeholder="Service Required">
+					</div>
+					<div class="form-group">
+						<textarea name="message" rows="5" placeholder="Message" required></textarea>
+					</div>
+					<button type="submit" class="btn-submit">Send Message</button>
+				</form>
+			</div>
+		</div>
+	</main>
+
+	<div th:insert="footer1::footer1"></div>
+	<div th:insert="footer2::footer2"></div>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Emerald-constructors-Developers</title>
+<link rel="icon" href="/asserts/images/Emeraldlogo.png">
+<link rel="stylesheet" href="/asserts/css/Emerald.css">
+</head>
+<body>
+	<div th:insert="menu::menu"></div>
+	  
+  <section id="heroSlider">
+    <div class="slider-wrapper">
+      
+      <!-- Image Slides Track -->
+      <div class="slider-track" id="sliderTrack">
+        
+        <!-- Slide 1: Mechanical -->
+        <div class="slide">
+          <img src="/asserts/images/s1.jpg" alt="Mechanical Contracting">
+          <div class="overlay">
+            <div class="content">
+              <h2>Emerald Constructors And Developers</h2>
+              <p>Mechanical fabrication and Erection works</p>
+              <a th:href="@{mechanicalfabrication}" class="cta-btn">Our Services</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="/asserts/images/s2.jpg" alt="Electrical Contracting">
+          <div class="overlay">
+            <div class="content">
+              <h2>ELECTRICAL SERVICES</h2>
+              <p>High voltage wiring and industrial power installations</p>
+              <a th:href="@{electricalwork}" class="cta-btn">Our Services</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="/asserts/images/s3.jpg" alt="Civil Works">
+          <div class="overlay">
+            <div class="content">
+              <h2>CIVIL CONTRACTS</h2>
+              <p>Comprehensive foundation, structural & civil engineering</p>
+              <a th:href="@{civilconstruction}" class="cta-btn">Our Services</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4: Manpower Supply -->
+        <div class="slide">
+          <img src="/asserts/images/s4.jpg" alt="Manpower Supply">
+          <div class="overlay">
+            <div class="content">
+              <h2>MANPOWER SUPPLY</h2>
+              <p>Certified, skilled, and professional technical workforce</p>
+              <a th:href="@{servicespage}" class="cta-btn">Our Services</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 5: Interior Works -->
+        <div class="slide">
+          <img src="/asserts/images/s5.jpg" alt="Interior Works">
+          <div class="overlay">
+            <div class="content">
+              <h2>INTERIOR WORKS</h2>
+              <p>Modern commercial fit-outs and architectural finishing</p>
+              <a th:href="@{interior}" class="cta-btn">Our Services</a>
+            </div>
+          </div>
+        </div>
+        
+        
+
+      </div>
+
+      <!-- Arrow Controls -->
+      <button class="nav-btn prev-btn" id="prevBtn" aria-label="Previous Slide">&#10094;</button>
+      <button class="nav-btn next-btn" id="nextBtn" aria-label="Next Slide">&#10095;</button>
+
+      <!-- Dots Indicators -->
+      <div class="dots-container" id="dotsContainer"></div>
+
+    </div>
+  </section>
+<br>
+  <section id="homecontent">
+    <div>
+      <p>We undertake all kind of contract works. Which includes Mechanical, Electrical, Civil, Man Power Supply, Interior works.</p>
+    </div>
+  </section>
+	
+	<section class="homeabout">
+		<h1 id="habouth1">About Us</h1>
+		<div id="haboutleft">
+			<img alt="" src="/asserts/images/Emeraldlogo.png">
+		</div>
+		<div id="haboutright">
+			<p>BHAVANI ELECTRICAL WORKS located in Hyderabad since 30 years
+				dealing with all industrial electrical works specialized in HT & LT
+				Electrical Consultations and Maintenance Engineer’s. Over the years,
+				the company has earned a reputation for excellence and
+				professionalism for continuously striving to meet - and even exceed
+				- standards which set the climate for a sustainable business
+				relationship with its clients. As an electrical solution specialist,
+				we undertake new project works and industrial maintenance works with
+				and without materials. Our team is composed of technically skilled
+				and highly dedicated personnel working cohesively to promote
+				value-added solutions with a competitive pricing structure to suit
+				your needs.</p>
+			<a th:href="@{aboutus}"><button id="haboutbtn">Read More</button></a>
+
+		</div>
+	</section>
+	
+	<div th:insert="servicesPage::servicesPage"></div>
+	<section id="homeCompany">
+		<h1 id="homec1">Our Leading Clients</h1>
+		<div id="homeCompanydiv">
+		<img alt="" src="/asserts/images/asianpaints.jpg">
+		<img alt="" src="/asserts/images/paragon.jpg">
+		<img alt="" src="/asserts/images/amazon.jpg">
+		<img alt="" src="/asserts/images/praxair.jpg">
+		<img alt="" src="/asserts/images/linde.jpg">
+		<img alt="" src="/asserts/images/akshayapatra.jpg">
+		</div>
+	</section>
+	<div th:insert="footer1::footer1"></div>
+	<div th:insert="footer2::footer2"></div>
+	<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const track = document.getElementById('sliderTrack');
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const dotsContainer = document.getElementById('dotsContainer');
+
+        let currentIndex = 0;
+        const intervalTime = 3500; // 2.5 seconds cycle
+        let autoSlideTimer = null;
+
+        // Create Pagination Dots dynamically
+        slides.forEach((_, index) => {
+          const dot = document.createElement('div');
+          dot.classList.add('dot');
+          if (index === 0) dot.classList.add('active');
+          dot.addEventListener('click', () => {
+            goToSlide(index);
+            resetAutoSlide();
+          });
+          dotsContainer.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll('.dot');
+
+        // Update Slider Position & Active Dot
+        function updateSlider() {
+          track.style.transform = `translateX(-${currentIndex * 100}%)`;
+          
+          dots.forEach((dot, index) => {
+            if (index === currentIndex) {
+              dot.classList.add('active');
+            } else {
+              dot.classList.remove('active');
+            }
+          });
+        }
+
+        function slideNext() {
+          currentIndex = (currentIndex + 1) % slides.length;
+          updateSlider();
+        }
+
+        function slidePrev() {
+          currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+          updateSlider();
+        }
+
+        function goToSlide(index) {
+          currentIndex = index;
+          updateSlider();
+        }
+
+        // Timer Management
+        function startAutoSlide() {
+          if (!autoSlideTimer) {
+            autoSlideTimer = setInterval(slideNext, intervalTime);
+          }
+        }
+
+        function stopAutoSlide() {
+          clearInterval(autoSlideTimer);
+          autoSlideTimer = null;
+        }
+
+        function resetAutoSlide() {
+          stopAutoSlide();
+          startAutoSlide();
+        }
+        nextBtn.addEventListener('click', () => {
+          slideNext();
+          resetAutoSlide();
+        });
+        prevBtn.addEventListener('click', () => {
+          slidePrev();
+          resetAutoSlide();
+        });
+        const sliderSection = document.getElementById('heroSlider');
+        sliderSection.addEventListener('mouseenter', stopAutoSlide);
+        sliderSection.addEventListener('mouseleave', startAutoSlide);
+        startAutoSlide();
+      });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Emerald-constructors-Developers</title>
+<link rel="icon" href="/asserts/images/Emeraldlogo.png">
+<link rel="stylesheet" href="/asserts/css/Emerald.css">
+</head>
+<body>
+	<div th:insert="menu::menu"></div>
+	<section class="servicesPage" th:fragment="servicesPage">
+		<h1 id="serviceh1">Our Services</h1>
+		<section id="servicesec1">
+			<img alt="" src="/asserts/images/serimg1.webp">
+			<p id="serp1">Electrical Installation Testing and Commissioning
+				Preventive Maintenance Power System Analysis Automation General
+				Electrical Supplies.</p>
+		</section>
+		<section id="servicesec2">
+			<img alt="" src="/asserts/images/serimg2.svg">
+			<p id="serp2">Mechanical fabrication and Erection work.</p>
+		</section>
+		<section id="servicesec3">
+			<img alt="" src="/asserts/images/serimg3.jpg">
+			<p id="serp3">Civil construction works</p>
+		</section>
+		<section id="servicesec4">
+			<img alt="" src="/asserts/images/serimg4.png">
+			<p id="serp4">Interior works</p>
+		</section>
+		<section id="servicesec5">
+			<img alt="" src="/asserts/images/serimg5.webp">
+			<p id="serp5">Painting works.</p>
+		</section>
+	</section>
+	<div th:insert="footer1::footer1"></div>
+	<div th:insert="footer2::footer2"></div>
+</body>
+</html>
