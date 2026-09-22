@@ -21,6 +21,10 @@ public class EmeraldController {
 	public String services(Model model) {
 		return "services";
 	}
+	@GetMapping("/servicesPage")
+	public String servicesPage(Model model) {
+		return "servicesPage";
+	}
 
 	@GetMapping("/gallery")
 	public String gallery(Model model) {
@@ -32,31 +36,35 @@ public class EmeraldController {
 		return "contactus";
 	}
 
-	@GetMapping("/electricalwork")
-	public String electricalworkPage(Model model) {
-		return "electricalwork";
+	@GetMapping("/realestate")
+	public String realestatePage(Model model) {
+		return "realestate";
 	}
 
-	@GetMapping("/mechanicalfabrication")
-	public String mechanicalfabricationPage(Model model) {
-		return "mechanicalfabrication";
+	@GetMapping("/plotsandlands")
+	public String plotsandlandsPage(Model model) {
+		return "plotsandlands";
 	}
 
-	@GetMapping("/civilconstruction")
-	public String civilConstructionpage(Model model) {
-		return "civilconstruction";
+	@GetMapping("/architecture")
+	public String architecturepage(Model model) {
+		return "architecture";
 	}
 
+	@GetMapping("/residentalconstruction")
+	public String residentalconstructionpage(Model model) {
+		return "residentalconstruction";
+	}
+	@GetMapping("/commercialconstruction")
+	public String commercialconstructionPage(Model model) {
+		return "commercialconstruction";
+	}
+	@GetMapping("/industrialconstruction")
+	public String industrialconstructionpage(Model model) {
+		return "industrialconstruction";
+	}
 	@GetMapping("/interior")
-	public String interiorpage(Model model) {
+	public String interiorPage(Model model) {
 		return "interior";
-	}
-	@GetMapping("/painting")
-	public String paintingPage(Model model) {
-		return "painting";
-	}
-	@GetMapping("/servicespage")
-	public String servicespage(Model model) {
-		return "servicesPage";
 	}
 }

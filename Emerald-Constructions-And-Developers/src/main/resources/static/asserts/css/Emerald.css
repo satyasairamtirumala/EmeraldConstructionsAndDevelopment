@@ -1225,3 +1225,207 @@ nav ul select {
         font-size: 18px;
       }
     }
+   /* Real Estate Main Section */
+.realestate {
+    padding-top: 100px;
+    width: 70%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    color: #555555; /* Muted dark gray body text */
+    line-height: 1.6;
+}
+
+/* Real Estate H1 Main Heading: Dark Navy Blue */
+#realestateh1 {
+    color: #1A2B4C; 
+    text-align: center;
+    font-size: 38px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+/* Real Estate H2 Subheadings: Burnt Orange / Rust */
+#realestateh2 {
+    color: #D84315; 
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+/* Real Estate Paragraphs */
+.realestate p {
+    font-size: 17px;
+    margin-bottom: 18px;
+}
+ /* Plots & Lands Main Section */
+.plots {
+    padding-top: 100px;
+    width: 70%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    color: #555555; /* Muted dark gray body text */
+    line-height: 1.6;
+}
+
+/* Plots H1 Main Heading: Dark Navy Blue */
+#plotsh1 {
+    color: #1A2B4C; 
+    text-align: center;
+    font-size: 38px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+/* Plots H2 Subheadings: Burnt Orange / Rust */
+#plotsh2 {
+    color: #D84315; 
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+/* Plots Paragraphs */
+.plots p {
+    font-size: 17px;
+    margin-bottom: 18px;
+}   
+/* Architecture Main Section */
+.architecture {
+    padding-top: 100px;
+    width: 70%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    color: #555555; /* Muted dark gray body text */
+    line-height: 1.6;
+}
+
+/* Architecture H1 Main Heading: Dark Navy Blue */
+#architectureh1 {
+    color: #1A2B4C; 
+    text-align: center;
+    font-size: 38px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+/* Architecture H2 Subheadings: Burnt Orange / Rust */
+#architectureh2 {
+    color: #D84315; 
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+/* Architecture Paragraphs */
+.architecture p {
+    font-size: 17px;
+    margin-bottom: 18px;
+}
+/* Residential Construction Main Section */
+.residential {
+    padding-top: 100px;
+    width: 70%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    color: #555555; /* Muted dark gray body text */
+    line-height: 1.6;
+}
+
+/* Residential H1 Main Heading: Dark Navy Blue */
+#residentialh1 {
+    color: #1A2B4C; 
+    text-align: center;
+    font-size: 38px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+/* Residential H2 Subheadings: Burnt Orange / Rust */
+#residentialh2 {
+    color: #D84315; 
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+/* Residential Paragraphs */
+.residential p {
+    font-size: 17px;
+    margin-bottom: 18px;
+}
+/* Commercial Construction Main Section */
+.commercial {
+    padding-top: 100px;
+    width: 70%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    color: #555555; /* Muted dark gray body text */
+    line-height: 1.6;
+}
+
+/* Commercial H1 Main Heading: Dark Navy Blue */
+#commercialh1 {
+    color: #1A2B4C; 
+    text-align: center;
+    font-size: 38px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+/* Commercial H2 Subheadings: Burnt Orange / Rust */
+#commercialh2 {
+    color: #D84315; 
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+/* Commercial Paragraphs */
+.commercial p {
+    font-size: 17px;
+    margin-bottom: 18px;
+}
+/* Industrial Construction Main Section */
+.industrial {
+    padding-top: 100px;
+    width: 70%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    color: #555555; /* Muted dark gray body text */
+    line-height: 1.6;
+}
+
+/* Industrial H1 Main Heading: Dark Navy Blue */
+#industrialh1 {
+    color: #1A2B4C; 
+    text-align: center;
+    font-size: 38px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+/* Industrial H2 Subheadings: Burnt Orange / Rust */
+#industrialh2 {
+    color: #D84315; 
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+/* Industrial Paragraphs */
+.industrial p {
+    font-size: 17px;
+    margin-bottom: 18px;
+}
